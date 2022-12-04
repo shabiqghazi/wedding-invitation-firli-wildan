@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Averia Serif Libre", serif;
+  }
+}
+@layer components {
+  .badge-hadir {
+    @apply ml-3 rounded-md bg-emerald-500 px-1  text-sm text-light;
+  }
+  .badge-tidakhadir {
+    @apply ml-3 rounded-md bg-red-500 px-1  text-sm text-light;
+  }
+  .comment {
+    @apply flex flex-col rounded-lg border border-primary bg-white p-2;
+  }
+  .ucapan {
+    @apply mt-2 text-lg;
+  }
+}
+
+@layer utilities {
+  @font-face {
+    font-family: Wedding;
+    src: url("/font/Wedding.otf");
+  }
+  @font-face {
+    font-family: Sundown;
+    src: url("/font/Sundown.ttf");
+  }
+  .font-wedding {
+    font-family: "Wedding", serif;
+  }
+  .font-sundown {
+    font-family: "Sundown", serif;
+  }
+}

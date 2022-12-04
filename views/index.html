@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style -->
+    <!--  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Wedding</title>
+  </head>
+  <body class="overflow-x-hidden" id="body">
+    <div
+      id="cover"
+      class="fixed top-0 left-0 z-50 flex h-full w-screen flex-col items-center justify-evenly bg-dark text-center duration-1000"
+    >
+      <h1 class="font-wedding mb-5 text-2xl text-light">Undangan Pernikahan</h1>
+      <div class="flex flex-col items-center justify-center gap-10">
+        <div class="rotate-180">
+          <img src="img/floral ornament/floral3.svg" alt="" class="w-40" />
+        </div>
+
+        <h1 class="font-sundown text-7xl italic text-light">F & W</h1>
+        <img
+          src="img/floral ornament/floral3.svg"
+          alt=""
+          class="w-40 sm:hidden lg:block"
+        />
+      </div>
+      <div class="hidden text-lg text-light" id="tujuan">
+        <p class="mb-3">Untuk:</p>
+        <p id="penerima">Seseorang</p>
+      </div>
+      <button
+        id="open"
+        class="rounded-full bg-primary px-6 py-2 text-lg text-dark"
+      >
+        Buka Undangan
+      </button>
+    </div>
+    <div id="page">
+      <section
+        id="header"
+        class="flex h-screen max-h-[1000px] flex-col items-center justify-center bg-dark bg-cover bg-center text-light lg:items-center"
+      >
+        <!-- <div class="absolute top-0 left-0 z-20 hidden lg:block">
+        <img src="img/frame/frame1_top-left (light).png" alt="" class="w-64" />
+      </div>
+      <div class="absolute bottom-0 right-0 z-20 hidden lg:block">
+        <img
+          src="img/frame/frame1_bottom-right (light).png"
+          alt=""
+          class="w-64"
+        />
+      </div> -->
+
+        <div class="z-20 flex flex-col items-center justify-center py-20">
+          <div class="rotate-180">
+            <img
+              src="img/floral ornament/floral3.svg"
+              alt=""
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="mb-5 w-64"
+            />
+          </div>
+          <div
+            class="mb-8 text-lg lg:text-2xl"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            Undangan Pernikahan
+          </div>
+          <h1
+            class="font-wedding text-4xl italic"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+            data-aos-delay="300"
+          >
+            Firliana & Wildan
+          </h1>
+          <div
+            class="mt-8 text-lg lg:text-2xl"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            28 Desember 2022
+          </div>
+          <img
+            src="img/floral ornament/floral3.svg"
+            alt=""
+            class="mt-5 w-64 sm:hidden lg:block"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          />
+          <p
+            class="mt-10"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            data-aos-delay="1400"
+          >
+            Menuju Pernikahan :
+          </p>
+          <div id="count-down" class="mt-5 flex w-full justify-around">
+            <div
+              id="hari"
+              class="text-center"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="1000"
+            >
+              <p class="text-4xl" id="jml-hari">30</p>
+              <p>Hari</p>
+            </div>
+            <div
+              id="jam"
+              class="text-center"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="1200"
+            >
+              <p class="text-4xl" id="jml-jam">23</p>
+              <p>Jam</p>
+            </div>
+            <div
+              id="menit"
+              class="text-center"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="1400"
+            >
+              <p class="text-4xl" id="jml-menit">59</p>
+              <p>Menit</p>
+            </div>
+            <div
+              id="detik"
+              class="text-center"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="1600"
+            >
+              <p class="text-4xl" id="jml-detik">59</p>
+              <p>Detik</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="page-1"
+        class="relative flex flex-col items-center justify-center bg-light pb-40 pt-24"
+      >
+        <img
+          src="img/section-divider/wave2.svg"
+          alt=""
+          class="absolute -top-16 z-20 w-full self-end md:hidden"
+        />
+        <div
+          class="lg:w-98 flex flex-col items-center justify-center p-8 text-center text-xl lg:px-96"
+        >
+          <p
+            class="text-center text-dark"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            Assalamu'alaikum Warahmatullahi Wabarakatuh
+          </p>
+          <br />
+          <p
+            class="text text-center text-dark"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
+            Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud
+            mengundang Ibu/Bapak/Saudara untuk menghadiri dan memberikan do'a
+            restu pada akad nikah dan pernikahan kami:
+          </p>
+          <p
+            class="font-sundown mt-8 text-4xl text-dark"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            Firliana Aulia Mulki, S.Pd.
+          </p>
+          <p
+            class="font-sundown text-5xl text-dark"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            &
+          </p>
+          <p
+            class="font-sundown text-4xl text-dark"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            Wildan Prima Azkiya
+          </p>
+          <img
+            src="img/floral ornament/floral4(dark).svg"
+            alt=""
+            class="mt-16 w-56"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          />
+        </div>
+      </section>
+      <section
+        id="page-2"
+        class="relative flex flex-col items-center justify-center bg-primary pb-36 pt-24"
+      >
+        <img
+          src="img/section-divider/wave4.svg"
+          alt=""
+          class="absolute -top-16 z-20 w-full self-end md:hidden"
+        />
+        <h1
+          class="font-wedding mb-20 text-4xl text-dark"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Waktu
+        </h1>
+        <div class="flex flex-col justify-center gap-14 text-center">
+          <div
+            class="flex flex-col gap-3 text-2xl text-dark"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <p class="text-3xl">Rabu</p>
+            <p class="text-7xl font-bold">28</p>
+            <p>Desember 2022</p>
+          </div>
+          <div
+            class="flex flex-col gap-3 text-2xl text-dark"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <p class="text-3xl font-bold">Akad Nikah</p>
+            <p>08.00 WIB</p>
+          </div>
+          <div
+            class="flex flex-col gap-3 text-2xl text-dark"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <p class="text-3xl font-bold">Resepsi</p>
+            <p>10.00 s.d 14.00 WIB</p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="page-3"
+        class="relative flex flex-col items-center justify-center bg-light pb-48 pt-24"
+      >
+        <img
+          src="img/section-divider/wave3.svg"
+          alt=""
+          class="absolute -top-16 z-20 w-full self-end md:hidden"
+        />
+        <h1
+          class="font-wedding mb-20 text-4xl text-dark"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          Tempat
+        </h1>
+        <div class="flex flex-col justify-center gap-14 px-8 text-center">
+          <div
+            class="text-xl text-dark"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <p>MI Ar-Rahman Pamoyanan</p>
+            <p>
+              Jl. Pamoyanan, Sukagalih, Kec. Tarogong Kidul, Kabupaten Garut
+            </p>
+          </div>
+          <div>
+            <iframe
+              class=""
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA_e2YNMEprmWvAykWJcF-SNTwT6cJjJCM&q=QVVJ%2B7J5+MI+Arrahman,+Kp+Jl.+Pamoyanan,+Sukagalih,+Kec.+Tarogong+Kidul,+Kabupaten+Garut,+Jawa+Barat+44151&zoom=18"
+              height="400"
+              frameborder="0"
+              style="border: 0; width: 100%; z-index: 1"
+              allowfullscreen=""
+              data-aos="zoom-in-up"
+              data-aos-duration="1600"
+            ></iframe>
+          </div>
+          <a
+            href="https://www.google.com/maps/place/QVVJ%2B7J5+MI+Arrahman,+Kp+Jl.+Pamoyanan,+Sukagalih,+Kec.+Tarogong+Kidul,+Kabupaten+Garut,+Jawa+Barat+44151/@-7.2076457,107.8815537,18z/data=!4m14!1m7!3m6!1s0x2e6f4fccd2570551:0x6bfc72584a81aa74!2sQ5HR%2B86M+GOR+Desa+Rajapolah,+Rajapolah,+Kec.+Rajapolah,+Kabupaten+Tasikmalaya,+Jawa+Barat+46155!8m2!3d-7.2216661!4d108.1905514!16s%2Fg%2F11gg73k07f!3m5!1s0x2e68b1b3449130cd:0x2f66e3c7bce94836!8m2!3d-7.2069825!4d107.8813318!16s%2Fg%2F11gkys7px8"
+            class="rounded-full bg-dark px-4 py-2 text-light active:ring-2 active:ring-dark active:ring-offset-1"
+            >Buka di Google Maps</a
+          >
+        </div>
+      </section>
+      <section
+        id="page-4"
+        class="relative flex flex-col items-center justify-center bg-dark pb-24 pt-24"
+      >
+        <img
+          src="img/section-divider/wave5.svg"
+          alt=""
+          class="absolute -top-16 z-20 w-full self-end md:hidden"
+        />
+        <h1 class="font-wedding mb-20 text-4xl text-light">Doa dan ucapan</h1>
+        <div class="flex w-full max-w-xl flex-col justify-center px-4">
+          <div class="w-full rounded-2xl bg-light p-5">
+            <form id="form-komentar">
+              <div class="flex flex-col">
+                <div class="flex flex-col">
+                  <label for="nama">Nama</label>
+                  <input
+                    type="text"
+                    id="nama"
+                    class="mt-2 rounded-md border border-primary p-2 outline-dark"
+                    placeholder="Anonim"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="mt-2 flex flex-col">
+                  <label for="ucapan">Komentar</label>
+                  <textarea
+                    id="ucapan"
+                    rows="3"
+                    class="mt-2 rounded-md border border-primary p-2 outline-dark"
+                  ></textarea>
+                </div>
+                <div class="mt-2 flex flex-col">
+                  <label for="kehadiran">Konfirmasi kehadiran</label>
+                  <select
+                    id="kehadiran"
+                    class="mt-2 rounded-md border border-primary p-2 outline-dark"
+                  >
+                    <option value="1">Hadir</option>
+                    <option value="0">Tidak Hadir</option>
+                  </select>
+                </div>
+                <button
+                  id="form-submit"
+                  class="mt-4 w-fit self-end rounded-lg bg-dark px-4 py-2 text-light"
+                >
+                  Kirim
+                </button>
+              </div>
+            </form>
+            <div id="komentar-list" class="mt-4 flex flex-col gap-1"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      class="invisible fixed top-0 left-0 z-40 flex h-screen w-screen items-center justify-center p-5 backdrop-brightness-50"
+      id="alert"
+    >
+      <div
+        class="flex w-full max-w-lg flex-col items-center justify-center gap-10 rounded-2xl bg-light p-10"
+        id="content-alert"
+      >
+        <img src="img/utils/check.svg" alt="" class="w-36" />
+        <p class="text-lg text-dark">Berhasil menambahkan komentar!</p>
+      </div>
+    </div>
+    <div
+      id="footer"
+      class="flex flex-col items-center justify-center bg-primary py-8 px-5 text-center text-dark"
+    >
+      <p class="mb-2 text-lg font-bold">
+        Created by
+        <a href="https://shabiqghazi.github.io/" class="underline">Shabiq G</a>
+      </p>
+      <p>Credits:</p>
+      <p>Music: Sal Priadi & Nadin Amizah - Amin Paling Serius</p>
+    </div>
+    <button
+      class="fixed top-20 left-0 z-30 flex h-12 w-12 flex-col items-center justify-center rounded-full border-2 border-primary bg-dark duration-200 active:scale-90"
+      id="backsound-toggle"
+    >
+      <img
+        src="img/utils/music-solid.svg"
+        alt=""
+        class="hidden h-7 w-7"
+        id="play"
+      />
+      <img src="img/utils/pause-solid.svg" alt="" class="h-6 w-6" id="pause" />
+    </button>
+    <audio id="backsound">
+      <source
+        src="audio/sal-priadi-nadin-amizah-amin-paling-serius.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // AOS.init();
+    </script>
+    <script type="module" src="js/dbconnect.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
