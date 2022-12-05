@@ -22,10 +22,11 @@ var myfunc = setInterval(function () {
 }, 1000);
 
 let cover = document.getElementById("cover");
+let coverOpen = document.getElementById("open");
 let backsoundToggle = document.getElementById("backsound-toggle");
 let backsound = document.getElementById("backsound");
 let isPlaying = false;
-cover.addEventListener("click", () => {
+coverOpen.addEventListener("click", () => {
   window.scrollTo(0, 0);
   cover.style.top = "-100vh";
   backsound.volume = 0.3;
