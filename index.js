@@ -34,6 +34,9 @@ app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/views/index.html"));
 });
+app.get("/tujuan", (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/tujuan.html"));
+});
 app.get("/komentar", async (req, res) => {
   let { data: komentar, error } = await supabase.from("komentar").select("*");
   res.json(komentar);
