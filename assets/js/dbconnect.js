@@ -1,5 +1,5 @@
 const getKomentar = () => {
-  fetch("http://localhost:3000/komentar")
+  fetch("http://wedding-invitation-firli-wildan.vercel.app/komentar")
     .then((res) => res.json())
     .then((data) => {
       updateComments(data);
@@ -30,7 +30,7 @@ const tambahKomentar = (data) => {
     if (data.nama == "") {
       data.nama = "Anonim";
     }
-    fetch("http://localhost:3000/komentar", {
+    fetch("wedding-invitation-firli-wildan.vercel.app/komentar", {
       method: "POST", // or 'PUT'
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
