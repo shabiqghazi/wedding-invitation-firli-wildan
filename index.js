@@ -6,6 +6,13 @@ const port = 3000;
 const db = require("./assets/data/komentar.json");
 const bodyParser = require("body-parser");
 const fs = require("fs");
+const dbpassword = "sJrncOiHkkyT2XdC";
+const { createClient } = require("@supabase/supabase-js");
+
+const supabaseUrl = "https://eldfgsebrmxtttlgdqit.supabase.co";
+const supabaseKey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVsZGZnc2Vicm14dHR0bGdkcWl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzAxOTkyOTksImV4cCI6MTk4NTc3NTI5OX0.85GidDshJWbU3Kg3CL6D4Kdy2omSa8vVBF6h71Qyv4A";
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 app.use(
   bodyParser.urlencoded({
@@ -27,19 +34,15 @@ app.use("/js", express.static(path.resolve(__dirname, "assets/js")));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/views/index.html"));
 });
-app.get("/komentar", (req, res) => {
-  res.json(db);
+app.get("/komentar", async (req, res) => {
+  let { data: komentar, error } = await supabase.from("komentar").select("*");
+  res.json(komentar);
 });
-app.post("/komentar", (req, res) => {
-  console.log(req.body);
-  let database = JSON.parse(
-    fs.readFileSync("./assets/data/komentar.json", "utf8")
-  );
-  // edit or add property
-  database.komentar.push(req.body);
-  //write file
-  fs.writeFileSync("./assets/data/komentar.json", JSON.stringify(database));
-  res.json(database);
+app.post("/komentar", async (req, res) => {
+  const { data, error } = await supabase.from("komentar").insert([req.body]);
+  res.json({
+    message: "success",
+  });
 });
 
 app.listen(port, () => {

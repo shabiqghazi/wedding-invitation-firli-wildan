@@ -7,9 +7,8 @@ const getKomentar = () => {
     .catch((err) => console.log(err));
 };
 const updateComments = (data) => {
-  console.log(data);
   let strings = "";
-  data.komentar.forEach(
+  data.forEach(
     (komen) =>
       (strings += `<div class="comment">
           <div class="flex items-center justify-between">
@@ -38,11 +37,13 @@ const tambahKomentar = (data) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        document.getElementById("alert").classList.remove("invisible");
-        setTimeout(() => {
-          document.getElementById("alert").classList.add("invisible");
-        }, 3000);
-        updateComments(data);
+        if (data.message == "success") {
+          document.getElementById("alert").classList.remove("invisible");
+          setTimeout(() => {
+            document.getElementById("alert").classList.add("invisible");
+          }, 3000);
+          getKomentar();
+        }
       })
       .catch((error) => {
         console.error("Error:", error);
