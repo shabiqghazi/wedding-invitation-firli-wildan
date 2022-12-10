@@ -18,6 +18,19 @@ var myfunc = setInterval(function () {
     clearInterval(myfunc);
     let countDownContainer = document.getElementById("count-down");
     countDownContainer.classList.add("hidden");
+    document.getElementById("menuju").classList.add("hidden");
+    document.getElementById("status").classList.remove("hidden");
+    if (
+      timeleft * -1 + tanggalPernikahan <
+      tanggalPernikahan + 1000 * 60 * 60 * 24
+    ) {
+      console.log(
+        timeleft * -1 + tanggalPernikahan,
+        tanggalPernikahan + 60 * 60 * 24
+      );
+    } else {
+      document.getElementById("status").innerText = "Acara sudah selesai";
+    }
   }
 }, 1000);
 
