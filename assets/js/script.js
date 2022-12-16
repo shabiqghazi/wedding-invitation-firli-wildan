@@ -70,7 +70,7 @@ for (let i = 0; i < params_arr.length; i++) {
   let pair = params_arr[i].split("=");
   if (pair[1]) {
     document.getElementById("tujuan").classList.remove("hidden");
-    let recipient = decodeURI(pair[1]);
+    let recipient = decodeURIComponent(pair[1]);
     document.getElementById("penerima").innerText = recipient;
   }
 }
