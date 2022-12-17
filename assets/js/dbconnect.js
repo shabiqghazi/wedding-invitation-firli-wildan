@@ -8,11 +8,20 @@ const getKomentar = () => {
 };
 const updateComments = (data) => {
   let strings = "";
-  data.forEach(
-    (komen) =>
-      (strings += `<div class="comment">
+  data.forEach((komen, index) => {
+    let namaArray = komen.nama.split(" ");
+    namaArray.forEach((namaElement, index) => {
+      if (namaElement.length > 20) {
+        console.log(namaElement);
+        namaElement = namaElement.substring(0, 20);
+        console.log(namaElement);
+        namaArray[index] = namaElement + "...";
+      }
+    });
+    let nama = namaArray.join(" ");
+    strings += `<div class="comment">
           <div class="flex items-center justify-between">
-            <p class="text-xl text-dark font-bold">${komen.nama}</p>
+            <p class="text-xl text-dark font-bold">${nama}</p>
             ${
               komen.kehadiran == 1
                 ? "<p class='badge-hadir'>Hadir"
@@ -20,8 +29,8 @@ const updateComments = (data) => {
             }</p>
           </div>
           <p class="ucapan">${komen.ucapan}</p>
-        </div>`)
-  );
+        </div>`;
+  });
   document.getElementById("komentar-list").innerHTML = strings;
 };
 
