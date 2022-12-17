@@ -49,7 +49,6 @@ coverOpen.addEventListener("click", () => {
   AOS.init();
 });
 backsoundToggle.addEventListener("click", () => {
-  console.log(isPlaying);
   if (isPlaying) {
     backsound.pause();
     isPlaying = false;

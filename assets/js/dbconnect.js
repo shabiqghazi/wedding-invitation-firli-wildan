@@ -1,5 +1,5 @@
 const getKomentar = () => {
-  fetch("https://wedding-invitation-firli-wildan.vercel.app/komentar")
+  fetch("https://wedding-invitation-firliana-wildan.vercel.app/komentar")
     .then((res) => res.json())
     .then((data) => {
       updateComments(data);
@@ -12,9 +12,7 @@ const updateComments = (data) => {
     let namaArray = komen.nama.split(" ");
     namaArray.forEach((namaElement, index) => {
       if (namaElement.length > 20) {
-        console.log(namaElement);
         namaElement = namaElement.substring(0, 20);
-        console.log(namaElement);
         namaArray[index] = namaElement + "...";
       }
     });
@@ -39,7 +37,7 @@ const tambahKomentar = (data) => {
     if (data.nama == "") {
       data.nama = "Anonim";
     }
-    fetch("https://wedding-invitation-firli-wildan.vercel.app/komentar", {
+    fetch("https://wedding-invitation-firliana-wildan.vercel.app/komentar", {
       method: "POST", // or 'PUT'
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

@@ -38,7 +38,10 @@ app.get("/tujuan", (req, res) => {
   res.sendFile(path.join(__dirname + "/views/tujuan.html"));
 });
 app.get("/komentar", async (req, res) => {
-  let { data: komentar, error } = await supabase.from("komentar").select("*");
+  let { data: komentar, error } = await supabase
+    .from("komentar")
+    .select("*")
+    .order("id", { ascending: true });
   res.json(komentar);
 });
 app.post("/komentar", async (req, res) => {
